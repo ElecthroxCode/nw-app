@@ -14,14 +14,17 @@ import { Component } from '@angular/core';
       (mouseenter)="hoveredIndex = $index" 
       (mouseleave)="hoveredIndex = null"
     >
-        <div class="img-card"></div>
+        <div class="img-card" [class.img-hover]="hoveredIndex === $index"></div>
         <div class="card-content">
-          <h3 class="">Barbería</h3>
-          <span class="card-subtitle">El cangri</span>
-          <p>Realizamos todo tipo de cortez de cabello de niños y cabellero.</p>
+        <div class="">
+          <h3 class="title-card">El cangri</h3>
+          <p class="subtitle-card">Barbería</p>
+        </div>
+          <div class="star-container">⭐ <span>4.7</span></div>
+          <p>Realizamos todo tipo de cortes de cabello de niños y cabelleros.</p>
         </div>
         <div class="card-btn">
-          <button class="btn-c btn-primary" [class.btn-c-hover]="hoveredIndex === $index ">Ver servicios</button>
+          <button class="btn-c btn-primary" [class.btn-c-hover]="hoveredIndex === $index ">View more</button>
         </div>
       </div>
     }
@@ -40,7 +43,7 @@ import { Component } from '@angular/core';
 
     .section-title {
       text-align: center;
-      margin-bottom: 0.5rem;
+      margin-bottom: 3rem;
       color: var(--color-text);
     }
 
@@ -66,15 +69,28 @@ import { Component } from '@angular/core';
       background-size: cover;
       background-position: center;
       height: 10rem;
+      transition: transform 0.3s ease;
     }
+
+    .img-hover{
+      transform: scale(1.05);
+    }
+
     .card-content{
       padding: 4px;
     }
 
-    .card-subtitle{
-      font-weight: 500;
+    .title-card{
+      margin-bottom: 0px;
+    }
+    .subtitle-card{
+      color: var(--color-text-light);
     }
     
+    .star-container{
+      margin-bottom: 1.5rem;
+    }
+
     .btn-c{
       display: inline-block;
       padding: 0.75rem 1.5rem;

@@ -14,7 +14,17 @@ import { CardBusinessComponent } from '../card-business/card-business.component'
     GalleryComponent,
     CardBusinessComponent,
   ],
-  templateUrl: './page-home.component.html',
-  styleUrl: './page-home.component.css',
+  template: `
+    <app-hero></app-hero>
+    <app-service-categories></app-service-categories>
+    <app-booking-search></app-booking-search>
+    <app-gallery></app-gallery>
+    <div>
+      <app-card-business></app-card-business>
+    </div>
+  `,
+  styles: [`
+
+    `],
 })
 export class PageHomeComponent {}
