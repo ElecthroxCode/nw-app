@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
+  imports:[RouterLink],
   template: `
     <header>
       <div class="container header-container">
@@ -20,7 +22,7 @@ import { Component } from '@angular/core';
           </ul>
         </nav>
         <div class="cta-button">
-          <button class="btn btn-primary">Sign In</button>
+          <button routerLink="/register" class="btn btn-primary">Sign In</button>
         </div>
       </div>
     </header>

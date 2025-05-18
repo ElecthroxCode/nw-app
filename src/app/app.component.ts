@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { PageHomeComponent } from './components/features/home/page-home/page-home.component';
@@ -10,16 +10,16 @@ import { PageHomeComponent } from './components/features/home/page-home/page-hom
   standalone: true,
   imports: [
     CommonModule,
-    RouterOutlet,
+    RouterModule,
     HeaderComponent,
-    PageHomeComponent,
     FooterComponent,
   ],
   template: `
     <div class="app-container">
       <app-header></app-header>
       <main>
-      <app-page-home></app-page-home>
+      
+      <router-outlet></router-outlet>
       </main>
       <app-footer></app-footer>
     </div>
