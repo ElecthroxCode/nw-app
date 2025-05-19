@@ -8,16 +8,8 @@ import { Component } from '@angular/core';
 })
 export class UserRegisterComponent {
 
-selected = true;
 
 
-selectBtn(nameBtn:string){
-  if(!this.selected && nameBtn == "customer"){
-    this.selected = true;
-  }
-  if(this.selected && nameBtn == "company"){
-    this.selected = false;
-  }
-}
+
 
 }

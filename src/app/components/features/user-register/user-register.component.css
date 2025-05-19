@@ -1,7 +1,7 @@
 
 .container-register{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     height: 100vh;
     border-bottom: 1px solid var(--color-pink-light);
 }
@@ -12,26 +12,6 @@
 }
 
 
-
-.btns .btn-register{
-    width: 8rem;
-    height: 2.5rem;
-    color: var(--color-white);
-    transition: 0.3s ease;
-}
-
-.btns .btn-customer{
-    border-bottom-left-radius: 24px;
-    background-color: var(--color-pink-dark);
-    color: var(--color-text);
-}
-
-.btns .btn-company{
-    border-top-right-radius: 24px;
-    background-color: var(--color-pink-dark);
-    color: var(--color-text);
-}
-
 .msg-register{
     display: flex;
     flex-direction: column;
@@ -41,6 +21,10 @@
    
 }
 
+.msg-register div p{
+    text-align: left;
+}
+
 .register{
     display: grid;
     place-items: center;
@@ -48,15 +32,8 @@
     max-width: 20rem;
 
 }
-.register h3{
-    text-align: center;
-    font-weight: 600;
-    
-}
 
-
-
-.register input[type="text"]{
+.register input[type="text"], .register input[type="password"]{
     height: 2.5rem;
     width: 15rem;
     padding: 6px;
@@ -67,4 +44,89 @@
 .btn-register{
     background-color: var(--color-sage-dark);
     color: var(--color-white);
+    border: 1px solid transparent;
+    transition: .3s ease;
 }
+
+.btn-register:hover{
+    border: 1px solid var(--color-pink-dark);
+   
+}
+
+@media (max-width: 480px) {
+    .container-register {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
+    .register{
+        place-items: initial;
+    }
+
+    .register, .zone-msg {
+      width: 100%;
+      max-width: 100%;
+      padding: 1.5rem;
+      text-align: center;
+      
+    }
+  
+    .msg-register {
+      height: auto;
+    }
+  
+    .register input[type="text"],
+    .register input[type="password"] {
+      width: 100%;
+    }
+  }
+  
+
+  /* Tablets (pantallas medianas) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container-register {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    
+    .register{
+        place-items: initial;
+    }
+    .zone-msg,
+    .register {
+      padding: 2rem;
+      max-width: 100%;
+      text-align: center;
+    }
+  
+    .msg-register {
+      height: auto;
+      align-items: center;
+    }
+  
+    .register input[type="text"],
+    .register input[type="password"] {
+      width: 80%;
+    }
+  }
+  
+  /* Pantallas medianas a grandes (como laptops pequeñas) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .container-register {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .register{
+        place-items: initial;
+        align-items: center;
+        padding-left: 3rem;
+    }
+    .zone-msg {
+      padding: 4rem;
+    }
+  
+    .register input[type="text"],
+    .register input[type="password"] {
+      width: 90%;
+    }
+  }
