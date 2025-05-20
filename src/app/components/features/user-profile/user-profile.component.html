@@ -4,11 +4,12 @@
         <div class="section-profile profile-grid">
         
                 <div class="img-banner">
+                    <input type="file" name="" id="image-bn">
                     <div class="container-img-profile">
-                        <div class="img-profile"></div>
-                        <div class="icon-edit icon-profile"></div>
+                        <div class="img-profile"><input type="file" name="" id="image-pf"></div>
+                        <label for="image-pf" class="icon-edit icon-profile"></label>
                     </div>
-                    <div class="icon-edit icon-banner"></div>
+                    <label for="image-bn" class="icon-edit icon-banner"></label>
                 </div>
                 
         
@@ -49,6 +50,20 @@
              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam aspernatur rerum excepturi quod debitis itaque iusto nesciunt error porro consequatur. Repellat expedita velit eos accusantium corrupti veniam unde sint reprehenderit.</p>
              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem eaque obcaecati enim, cumque nemo autem tempore aspernatur deserunt aperiam molestias, laudantium perferendis repellendus, aut eveniet sint at ipsum impedit illum!</p>
         </div>
+
+        <!-- Botón para abrir el modal -->
+<button onclick="document.getElementById('miModal').showModal()">Abrir Modal</button>
+
+<!-- El modal -->
+<dialog id="miModal">
+  <h2>¡Este es un modal HTML puro!</h2>
+  <p>No necesitas JavaScript para la funcionalidad básica.</p>
+  
+  <!-- Botón para cerrar (sin JS) -->
+  <form method="dialog">
+    <button>Cerrar</button>
+  </form>
+</dialog>
 
 
     </div>

@@ -12,7 +12,12 @@
 .img-banner{
     height: 14rem;
     overflow: hidden;
-    background-color: blueviolet;
+    background-image: url('https://images.pexels.com/photos/3998408/pexels-photo-3998408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: contain;
+    background-size: cover;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .icon-edit{
@@ -38,10 +43,23 @@
     height: 10rem;
     width: 10em;
     overflow: hidden;
-    background-color: red;
+    background-image: url('https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+    background-size: cover;
     border: 4px solid var(--color-white);
     border-radius: 50%;
    
+}
+.img-banner input[type="file"],
+.img-profile input[type="file"]{
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    border: 0;
+    
 }
 
 .icon-profile{
@@ -61,4 +79,19 @@
     background-color: blue;
     top: 260px;
     right: 20px;
+}
+
+
+dialog {
+  border: none !important;
+  border-radius: 8px;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Fondo oscuro detrás del modal */
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
 }
