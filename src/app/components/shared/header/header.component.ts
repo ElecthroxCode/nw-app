@@ -22,6 +22,7 @@ import { RouterLink } from '@angular/router';
           </ul>
         </nav>
         <div class="cta-button">
+           <button routerLink="/register" class="btn btn-primary">My Profile</button>
           <button routerLink="/register" class="btn btn-primary">Sign In</button>
         </div>
       </div>
