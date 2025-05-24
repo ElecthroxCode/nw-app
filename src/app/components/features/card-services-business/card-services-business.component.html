@@ -1,5 +1,5 @@
 <div class="card-service">
-    <div class="icon-edit" id="icon"><i class="bi bi-pencil-square"></i></div>
+    <div class="icon-edit" id="icon" (click)="openModal()" ><i class="bi bi-pencil-square"></i></div>
     <div class="card-hero"></div>
     <div class="card-content">
         <h3>Tinturado de barba</h3>
@@ -12,3 +12,6 @@
     
 </div>
 <hr>
+@if (modalSwitchService.$isModalEditServiceOpen | async ){
+    <app-modal-edit-service></app-modal-edit-service>
+}
