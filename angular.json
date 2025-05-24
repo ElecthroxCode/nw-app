@@ -32,7 +32,8 @@
             "outputPath": "dist/demo",
             "polyfills": ["zone.js"],
             "scripts": [],
-            "styles": ["src/global_styles.css"],
+            "styles": ["node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/global_styles.css"],
             "tsConfig": "tsconfig.app.json"
           }
         },

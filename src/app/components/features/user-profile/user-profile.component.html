@@ -3,20 +3,23 @@
     <div class="section-profile profile-grid">
 
       <div class="img-banner">
-        <input type="file" name="" id="image-bn">
+        <div class="img-banner-area">
+          <input type="file" name="" id="image-bn">
+          <label for="image-bn" class="icon-edit icon-banner icon-bg-color"><i class="bi bi-pencil-square"></i></label>
+        </div>
         <div class="container-img-profile">
           <div class="img-profile"><input type="file" name="" id="image-pf"></div>
-          <label for="image-pf" class="icon-edit icon-profile"></label>
+          <label for="image-pf" class="icon-edit icon-profile icon-bg-color"><i class="bi bi-pencil-square"></i></label>
         </div>
-        <label for="image-bn" class="icon-edit icon-banner"></label>
+        
       </div>
 
       <div class="info-profile">
-        <div class="icon-edit icon-info"></div>
+        <div class="icon-edit icon-info"><i class="bi bi-pencil-square"></i></div>
 
         <div class="info">
-          <h3>José Pérez</h3>
-          <p>user-profile works!</p>
+          <h3 class="name">José Pérez</h3>
+          
           <div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore iusto excepturi sapiente,
               quae amet nulla quos sit asperiores obcaecati vel possimus veniam expedita esse neque
@@ -25,10 +28,10 @@
 
           <div>
 
-            <div>
-              <div><button>My Appointment</button></div>
+            <div class="btns-info-modal">
+              <button>My Appointment</button>
               <!-- Botón para abrir el modal -->
-              <button onclick="document.getElementById('miModal').showModal()">Publica tu
+              <button (click)="showModal()">Publica tu
                 emprendimiento</button>
             </div>
           </div>
@@ -37,80 +40,27 @@
 
     </div>
 
+    @if (showServiceBusiness) {
     <div class="section-profile">
       <div class="btns-panel-services">
-        <button>View my Services</button>
+        <button class="btn-selected">View my Services</button>
         <button>Edit Business Hours</button>
         <button>Edit Business Hours</button>
       </div>
     </div>
 
-    <div class="section-profile">
+    <div class="section-profile services-content">
       <!-- Services here -->
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum odit cumque inventore. Ducimus itaque
-        id, porro cum excepturi exercitationem harum cupiditate dignissimos non. Excepturi molestias, dolorum
-        natus at temporibus exercitationem.</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui autem, ipsam sunt nihil quasi veniam porro,
-        quaerat tenetur maxime suscipit sit molestias labore provident totam veritatis explicabo eveniet
-        doloremque facilis!</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam odio explicabo iste omnis, ipsam dolor,
-        quisquam repellat sint voluptatibus porro et laborum officia nesciunt. Praesentium vel fuga nobis
-        facilis alias?</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam aspernatur rerum excepturi quod debitis
-        itaque iusto nesciunt error porro consequatur. Repellat expedita velit eos accusantium corrupti veniam
-        unde sint reprehenderit.</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem eaque obcaecati enim, cumque nemo
-        autem tempore aspernatur deserunt aperiam molestias, laudantium perferendis repellendus, aut eveniet
-        sint at ipsum impedit illum!</p>
+      <h2>Servicios</h2>
+      @for (item of [0,0,0,0]; track $index) {
+      <app-card-services-business></app-card-services-business>
+      }
     </div>
+    }
 
-    <!-- modal -->
+    @if (isShowModal) {
+    <app-modal-register></app-modal-register>
+    }
 
-    <div class="modal-section">
-      <div class="modal-content">
-        <h3>Información sobre la empresa</h3>
-        <p>Por favor, rellena con información véridica el siguiente formulario</p>
-        <form action="" >
-          <div class="form-text"><label for="">Nombre de la empresa</label><input type="text" id=""></div>
-          <div class="form-text"><label for="">Nombre del encargado</label><input type="text" id=""></div>
-          <div class="form-text"><label for="">Télefono de la empresa</label><input type="text" id=""></div>
-          <div class="form-text"><label for="">Email de la empresa</label><input type="text" id=""></div>
-          <div><button>Agregar servicio</button></div>
-          <div>
-            <hr>
-            <br>
-            <form action="" class="sub-form">
-              <div class="form-text"><label for="">Nombre del servicio</label><input type="text" id=""></div>
-              <div class="form-text"><label for="">Descripción</label><textarea name="" id=""></textarea></div>
-              <div class="form-text"><label for="">Precio base del servicio</label><input type="text" id=""></div>
-              <div>
-                <button>Añadir imagenes</button>
-              </div>
-              <div class="form-text sub-form">
-                <hr>
-                <br>
-                <div class="form-text"><label for="">Descripción de la imagen</label><input type="text" id=""></div>
-                <div class="form-text"><label for="">Precio porcentaje añadido al valor base</label><input type="text" id=""></div>
-                <div>
-                  <button>Finalizar imagen</button>
-                </div>
-              </div>
-              <div>
-                <button>Finalizar servicio</button>
-              </div>         
-            </form>
-          </div>
-          <hr>
-           <br>
-              <div class="btns-modal">
-                <button class="btn-cancelar">Cancelar</button>
-                <button class="btn-send">Publicar empredimiento</button>
-              </div>
-        </form>
-      </div>
-      <div class="icon-close-modal">X
-
-      </div>
-    </div>
   </div>
 </section>

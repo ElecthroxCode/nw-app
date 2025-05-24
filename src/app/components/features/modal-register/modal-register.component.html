@@ -1,0 +1,70 @@
+<!-- modal -->
+
+<div class="modal-section">
+  <div class="modal-content">
+    <h3>Información sobre la empresa</h3>
+    <p>Por favor, rellena con información véridica el siguiente formulario</p>
+    <form action="">
+      <div class="form-text"><label for="">Nombre de la empresa</label><input type="text" id=""></div>
+      <div class="form-text"><label for="">Nombre del encargado</label><input type="text" id=""></div>
+      <div class="form-text"><label for="">Télefono de la empresa</label><input type="text" id=""></div>
+      <div class="form-text"><label for="">Email de la empresa</label><input type="text" id=""></div>
+      <div class="btn-context">
+        <div>
+          <button type="button" class="btn-add" (click)="addBtnService()"> <i class="bi bi-plus-lg"></i> </button>
+          <span>Agregar servicio</span>
+        </div>
+      </div>
+      <div>
+        <hr>
+        <br>
+        @if (enableAddService) {
+        <div class="sub-container">
+          <form action="" class="sub-form">
+            <div class="form-text"><label for="">Nombre del servicio</label><input type="text" id=""></div>
+            <div class="form-text"><label for="">Descripción</label><textarea name="" id=""></textarea></div>
+            <div class="form-text"><label for="">Precio base del servicio</label><input type="text" id=""></div>
+            <div class="check-icon"> <div><i class="bi bi-check-lg"></i></div></div>
+
+            <br>
+
+            <div class="btn-context">
+              <div>
+                <button type="button" class="btn-add" (click)="addBtnImg()"> <i class="bi bi-plus-lg"></i> </button>
+                <span>Agregar imagen</span>
+              </div>
+            </div>
+            <br>
+
+            @if (enableAddImg) {
+            <div class="form-text sub-form">
+              <br>
+              <div class="form-text"><label for="">Descripción de la imagen</label><input type="text" id=""></div>
+              <div class="form-text input-img"><label for="img-service">Buscar imagen <i class="bi bi-floppy img-icon"></i></label> <input type="file" name="" id="img-service"> <input type="text" id=""></div>
+              <div class="form-text"><label for="">Precio porcentaje añadido al valor base</label><input type="text"
+                  id=""></div>
+             <div class="check-icon"> <div><i class="bi bi-check-lg"></i></div></div>
+            </div>
+            }
+            <div class="btn-end">
+              <button type="button">Finalizar servicio</button>
+            </div>
+          </form>
+          
+        </div>
+        }
+
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="btns-modal">
+        <button class="btn-cancelar" (click)="closeModal()">Cancelar</button>
+        <button class="btn-send">Publicar empredimiento</button>
+      </div>
+    </form>
+  </div>
+  <div class="icon-close-modal" (click)="closeModal()">X
+
+  </div>
+</div>

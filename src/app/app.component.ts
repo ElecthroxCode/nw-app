@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HeaderComponent } from './components/shared/header/header.component';
-import { PageHomeComponent } from './components/features/home/page-home/page-home.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +12,7 @@ import { PageHomeComponent } from './components/features/home/page-home/page-hom
     RouterModule,
     HeaderComponent,
     FooterComponent,
+    
   ],
   template: `
     <div class="app-container">
