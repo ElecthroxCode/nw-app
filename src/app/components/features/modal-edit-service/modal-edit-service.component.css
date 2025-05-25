@@ -1,0 +1,33 @@
+
+.edit-modal{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.container-modal{
+    width: 100%;
+    max-width: 460px;
+    height: 80vh;
+    border-radius: 12px;
+    margin: auto;
+    background-color: var(--color-white);
+}
+
+.modal-content{
+    padding: 2rem;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+}
+.btns button{
+    width: 160px;
+    height: 40px;
+    
+}
+.btn-save{
+    background-color: var(--color-sage-dark);
+    color: var(--color-white);
+}

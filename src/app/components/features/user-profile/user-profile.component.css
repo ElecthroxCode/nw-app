@@ -1,64 +1,245 @@
+.section-profile {
+  margin-top: 1rem;
+  border: 1px solid var(--color-sage-dark);
+  border-radius: 8px;
 
-.section-profile{
-    margin-top: 1rem;
-    border: 1px solid var(--color-sage-dark);
-    border-radius: 8px;
-}
-.profile-grid{
-
-    position: relative;
 }
 
-.img-banner{
-    height: 14rem;
-    overflow: hidden;
-    background-color: blueviolet;
+.profile-grid {
+  position: relative;
 }
 
-.icon-edit{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    position: absolute;
+.img-banner {
+  height: 14rem;
+  overflow: hidden;
+  background-image: url('https://images.pexels.com/photos/3998408/pexels-photo-3998408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-position: contain;
+  background-size: cover;
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-.icon-banner{
-    background-color: gray;
-    top: 20px;
-    right: 20px;
+
+.icon-edit {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  place-items: center;
+  cursor: pointer;
+  transition: .3s ease;
+
 }
 
-.container-img-profile{
-    position: absolute;
-    top:120px;
-    left: 50px;
+.bi {
+  font-size: 26px;
 }
 
-.img-profile{
-    height: 10rem;
-    width: 10em;
-    overflow: hidden;
-    background-color: red;
-    border: 4px solid var(--color-white);
-    border-radius: 50%;
-   
+.icon-bg-color {
+  background-color: rgb(226, 226, 226);
 }
 
-.icon-profile{
-    background-color: greenyellow;
-    top: 110px;
-    right: 0;
+.icon-banner {
+  display: none;
+
+  top: 20px;
+  right: 20px;
 }
 
-.info-profile{
-    padding: 100px 8px 8px 8px;
+.img-banner-area {
+  height: 100%;
 }
 
-.info{
-    width: 60rem;
+.img-banner-area:hover .icon-banner {
+  display: grid;
 }
-.icon-info{
-    background-color: blue;
-    top: 260px;
-    right: 20px;
+
+.container-img-profile {
+  position: absolute;
+  top: 120px;
+  left: 50px;
 }
+
+
+.container-img-profile:hover .icon-profile {
+  display: grid;
+}
+
+.img-profile {
+  height: 10rem;
+  width: 10em;
+  overflow: hidden;
+  background-image: url('https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-position: center;
+  background-size: cover;
+  border: 4px solid var(--color-white);
+  border-radius: 50%;
+
+}
+
+.img-banner input[type="file"],
+.img-profile input[type="file"] {
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+
+}
+
+.icon-profile {
+  display: none;
+  top: 110px;
+  right: 0;
+}
+
+.info-profile {
+  padding: 80px 8px 8px 8px;
+}
+
+.info {
+  width: 60rem;
+  padding: 1rem;
+}
+
+.icon-info {
+  display: grid;
+  place-items: center;
+  top: 260px;
+  right: 20px;
+  transition: .3s ease;
+}
+
+.icon-info:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.services-content {
+  padding: 1.5rem
+}
+
+.name {
+  font-weight: bold;
+}
+
+.btns-info-modal {
+  padding: 8px 0px 8px 0px;
+  display: flex;
+  gap: 4px;
+
+}
+
+.btns-info-modal button {
+  width: 200px;
+  height: 30px;
+  border-radius: 24px;
+  background-color: rgb(226, 226, 226);
+  color: var(--color-sage-dark);
+  font-weight: bold;
+  transition: .3s ease;
+}
+
+.btns-info-modal button:hover {
+  background-color: var(--color-sage-dark);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+
+.btns-panel-services {
+  padding: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.btns-panel-services button {
+  width: 200px;
+  height: 40px;
+  border-radius: 24px;
+  transition: .3s ease;
+}
+
+.btns-panel-services button:hover {
+  background-color: var(--color-sage-dark);
+  color: var(--color-white);
+
+}
+
+.btn-selected {
+  background-color: var(--color-sage-dark);
+  color: var(--color-white);
+}
+
+
+.section-appointment-list{
+  margin-top: 2rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+  height: 80px;
+  
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+.btn-table{
+  width: 84px;
+  text-align: center;
+  gap: 16px;
+}
+
+.btn-hidden{
+  display: flex;
+  justify-content: end;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+.btn-hidden a{
+  transition: .3s ease;
+  width: 80px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-hidden a:hover{
+ background-color: rgb(226, 226, 226);
+}
+.btn-table .bi{
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 4px;
+  border: none;
+  transition: .3s ease;
+}
+
+.btn-delete:hover{
+  color: red;
+}
+
+.btn-table .btn-edit:hover{
+  color: rgb(22, 189, 133);
+}
+
+
+
+
+

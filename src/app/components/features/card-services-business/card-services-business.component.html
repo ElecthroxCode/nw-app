@@ -1,0 +1,17 @@
+<div class="card-service">
+    <div class="icon-edit" id="icon" (click)="openModal()" ><i class="bi bi-pencil-square"></i></div>
+    <div class="card-hero"></div>
+    <div class="card-content">
+        <h3>Tinturado de barba</h3>
+        <div class="card-description">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore tempore saepe excepturi sit minus maiores fugiat delectus, maxime quo repudiandae nisi ea enim quibusdam ipsam impedit? Fugit accusantium pariatur recusandae!</p>
+
+        </div>
+        <p><span class="price">Precio:</span> 65,800 COP</p>
+    </div>
+    
+</div>
+<hr>
+@if (modalSwitchService.$isModalEditServiceOpenObservable | async ){
+    <app-modal-edit-service></app-modal-edit-service>
+}

@@ -1,0 +1,131 @@
+
+
+.modal-content{
+  background-color: var(--color-white);
+  width: 60%;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: auto;
+  border-radius: 12px;
+  border: none;
+  padding: 2rem;
+  
+}
+
+
+.btns-modal{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btns-modal button{
+  width: 200px;
+  height: 50px;
+  
+}
+
+.btn-cancelar{
+  background-color: rgb(245, 245, 245);
+}
+
+.btn-send{
+  background-color: var(--color-sage-dark);
+  color: var(--color-white);
+}
+
+.sub-container{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sub-form{
+  width: 80vh;
+  max-width: 600px;
+
+}
+
+
+
+.bi{
+  font-size: 32px;
+}
+.btn-add{
+  width: 42px;
+  height: 40px;
+  background-color: var(--color-sage-light);
+  border-radius: 50%;
+}
+.btn-context{
+  display: flex;
+  justify-content: end;
+}
+.btn-context div{
+  display: grid;
+  place-items: center;
+  max-width: 160px;
+  cursor: pointer;
+}
+
+
+.input-img input[type="file"] {
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+
+  
+}
+.input-img label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: var(--color-sage-light);
+  max-width: 150px;
+}
+.img-icon {
+    font-size: 24px;
+    
+  }
+
+  .check-icon div{
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    width: 42px;
+    height: 41px;
+    border-radius: 50%;
+    background-color: rgb(189, 255, 233);
+    
+  }
+
+  .check-icon{
+    display: flex;
+    justify-content: left;
+  }
+
+  .btn-end button{
+    width: 160px;
+    height: 40px;
+    font-weight: bold;
+    color: var(--color-sage-dark);
+    background-color: var(--color-white);
+    border: 1px solid rgb(189, 255, 233);
+    transition: .3s ease;
+  }
+
+  .btn-end button:hover{
+    background-color: rgb(189, 255, 233);
+    color: var(--color-text);
+  }
+
+  .btn-end{
+    display: flex;
+    justify-content: end;
+  }
+
