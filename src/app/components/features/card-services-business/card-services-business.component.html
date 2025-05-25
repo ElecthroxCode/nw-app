@@ -12,6 +12,6 @@
     
 </div>
 <hr>
-@if (modalSwitchService.$isModalEditServiceOpen | async ){
+@if (modalSwitchService.$isModalEditServiceOpenObservable | async ){
     <app-modal-edit-service></app-modal-edit-service>
 }

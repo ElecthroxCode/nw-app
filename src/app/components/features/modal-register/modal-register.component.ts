@@ -9,14 +9,13 @@ import { ModalSwitchService } from '../../shared/services/modal-switch/modal-swi
 })
 export class ModalRegisterComponent {
  
-  private  $modalService = inject(ModalSwitchService);
-  isShowModal?:boolean;
+  private  modalAddCompanyService = inject(ModalSwitchService);
+ 
   enableAddService:boolean = false;
   enableAddImg:boolean = false;
 
   closeModal(){
-    this.$modalService.isShowModal(false);
-    this.isShowModal = false;
+    this.modalAddCompanyService.closeModalAddCompany();
   }
 
   addBtnImg(){

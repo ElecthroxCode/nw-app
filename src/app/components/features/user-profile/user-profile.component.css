@@ -2,7 +2,7 @@
   margin-top: 1rem;
   border: 1px solid var(--color-sage-dark);
   border-radius: 8px;
-  
+
 }
 
 .profile-grid {
@@ -29,28 +29,29 @@
   place-items: center;
   cursor: pointer;
   transition: .3s ease;
-  
+
 }
 
-.bi{
+.bi {
   font-size: 26px;
 }
 
-.icon-bg-color{
+.icon-bg-color {
   background-color: rgb(226, 226, 226);
 }
+
 .icon-banner {
   display: none;
- 
+
   top: 20px;
   right: 20px;
 }
 
-.img-banner-area{
+.img-banner-area {
   height: 100%;
 }
 
-.img-banner-area:hover .icon-banner{
+.img-banner-area:hover .icon-banner {
   display: grid;
 }
 
@@ -61,7 +62,7 @@
 }
 
 
-.container-img-profile:hover .icon-profile{
+.container-img-profile:hover .icon-profile {
   display: grid;
 }
 
@@ -111,25 +112,27 @@
   right: 20px;
   transition: .3s ease;
 }
-.icon-info:hover{
+
+.icon-info:hover {
   background-color: rgb(226, 226, 226);
 }
 
-.services-content{
+.services-content {
   padding: 1.5rem
- 
 }
+
 .name {
   font-weight: bold;
 }
 
-.btns-info-modal{
+.btns-info-modal {
   padding: 8px 0px 8px 0px;
   display: flex;
   gap: 4px;
-  
+
 }
-.btns-info-modal button{
+
+.btns-info-modal button {
   width: 200px;
   height: 30px;
   border-radius: 24px;
@@ -139,35 +142,104 @@
   transition: .3s ease;
 }
 
-.btns-info-modal button:hover{
+.btns-info-modal button:hover {
   background-color: var(--color-sage-dark);
   color: var(--color-white);
   font-weight: 500;
 }
 
 
-.btns-panel-services{
+.btns-panel-services {
   padding: 8px;
   display: flex;
   gap: 4px;
 }
 
-.btns-panel-services button{
+.btns-panel-services button {
   width: 200px;
   height: 40px;
   border-radius: 24px;
   transition: .3s ease;
 }
 
-.btns-panel-services button:hover{
+.btns-panel-services button:hover {
   background-color: var(--color-sage-dark);
   color: var(--color-white);
- 
+
 }
 
-.btn-selected{
+.btn-selected {
   background-color: var(--color-sage-dark);
   color: var(--color-white);
 }
+
+
+.section-appointment-list{
+  margin-top: 2rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+  height: 80px;
+  
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+.btn-table{
+  width: 84px;
+  text-align: center;
+  gap: 16px;
+}
+
+.btn-hidden{
+  display: flex;
+  justify-content: end;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+.btn-hidden a{
+  transition: .3s ease;
+  width: 80px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-hidden a:hover{
+ background-color: rgb(226, 226, 226);
+}
+.btn-table .bi{
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 4px;
+  border: none;
+  transition: .3s ease;
+}
+
+.btn-delete:hover{
+  color: red;
+}
+
+.btn-table .btn-edit:hover{
+  color: rgb(22, 189, 133);
+}
+
+
+
 
 

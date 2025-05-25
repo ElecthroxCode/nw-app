@@ -3,37 +3,62 @@ import { ModalRegisterComponent } from '../modal-register/modal-register.compone
 import { ModalSwitchService } from '../../shared/services/modal-switch/modal-switch.service';
 import { Subscription } from 'rxjs';
 import { CardServicesBusinessComponent } from '../card-services-business/card-services-business.component';
+import { CommonModule } from '@angular/common';
+import { ModadEditProfileComponent } from './modad-edit-profile/modal-edit-profile.component';
 
 @Component({
   selector: 'app-user-profile',
-  imports: [ModalRegisterComponent, CardServicesBusinessComponent],
+  imports: [ModalRegisterComponent, CardServicesBusinessComponent, CommonModule, ModadEditProfileComponent],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })
 export class UserProfileComponent implements OnInit, OnDestroy{
-
-  isShowModal?:boolean;
-  private subscription!: Subscription;
-  private $modal = inject(ModalSwitchService);
-  showServiceBusiness:boolean = true;
-  
   ngOnInit(): void {
-   this.subscription = this.$modal.$modalObservable.subscribe({
-      next: (resp:boolean) => {
-        this.isShowModal = resp;
-      },
-      error: (err: any)=> console.error('error en observable modal', err)
-        
-   })
+     this.subscriptions.add(
+    this.modalAddCompanyService.$modalAddCompanyObservable
+    .subscribe( (value:boolean) => {
+      this.isShowModalAddCompany = value;
+    })
+   );
+
+  this.subscriptions.add(
+      this.modalAddCompanyService.$isModalEditProfileOpenObservable
+    .subscribe( (value:boolean) => {
+      this.isShowModalEditProfile = value;
+    })
+    );
   }
 
-  showModal(){
-    this.$modal.isShowModal(true);
-  }
 
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-  }
+  private modalAddCompanyService = inject(ModalSwitchService);
+  isShowModalAddCompany?:boolean;
+  isShowServices:boolean = true;
+  isShowModalEditInfo:boolean = false;
+  isShowModalEditProfile?:boolean;
+  isHidden:boolean = true;
+
+  private subscriptions: Subscription = new Subscription();
   
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe(); 
+  }
 
+  openModal():void{
+    this.modalAddCompanyService.openModalAddCompany();
+  }
+  //modal edit info profile
+   openModalEditInfo():void{
+    this.modalAddCompanyService.openModalEditProfile();
+  }
+
+  //btn-hidden
+
+  showTable(){
+    this.isHidden = false;
+  }
+  hiddenTable(){
+    this.isHidden = true;
+  }
 }
+
+
