@@ -34,8 +34,8 @@
               <button (click)="openModal()">Publica tu
                 emprendimiento</button>
             </div>
-           @if (!isHidden) {
-             <div class="section-appointment-list">
+            @if (!isHidden) {
+            <div class="section-appointment-list">
               <div>
                 <h2>Tabla de Productos</h2>
                 <div class="btn-hidden">
@@ -57,32 +57,35 @@
                       <td>1</td>
                       <td>Corte de cabello</td>
                       <td>Corte de cabello de estilo '7'</td>
-                       <td>Bernando Fonzo</td>
+                      <td>Bernando Fonzo</td>
                       <td>$20.00</td>
-                      <td colspan="2" class="btn-table"><i class="bi bi-trash3 btn-delete"></i><i class="bi bi-pen btn-edit"></i></td>
+                      <td colspan="2" class="btn-table"><i class="bi bi-trash3 btn-delete"></i><i
+                          class="bi bi-pen btn-edit"></i></td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>Tinturado de barba</td>
                       <td>Barba tintura con tinte negro de la marca Barbiche</td>
-                       <td>Francisco Osorio</td>
+                      <td>Francisco Osorio</td>
                       <td>$24.00</td>
-                      <td colspan="2" class="btn-table"><i class="bi bi-trash3 btn-delete"></i><i class="bi bi-pen btn-edit"></i></td>
+                      <td colspan="2" class="btn-table"><i class="bi bi-trash3 btn-delete"></i><i
+                          class="bi bi-pen btn-edit"></i></td>
                     </tr>
                     <tr>
                       <td>3</td>
                       <td>Corte de cabello</td>
                       <td>Corte de cabello de estilo Daddy Yankee</td>
-                       <td>Julio Cedeño</td>
+                      <td>Julio Cedeño</td>
                       <td>$20.00</td>
-                      <td colspan="2" class="btn-table"><i class="bi bi-trash3 btn-delete"></i><i class="bi bi-pen btn-edit"></i></td>
+                      <td colspan="2" class="btn-table"><i class="bi bi-trash3 btn-delete"></i><i
+                          class="bi bi-pen btn-edit"></i></td>
                     </tr>
                   </tbody>
                 </table>
 
               </div>
             </div>
-           }
+            }
           </div>
         </div>
       </div>
@@ -92,18 +95,32 @@
     @if (isShowServices) {
     <div class="section-profile">
       <div class="btns-panel-services">
-        <button class="btn-selected">View my Services</button>
-        <button>Edit Business Hours</button>
+        <button type="button" [class.btn-selected]="isShowListService" (click)="enableSection(true)">View my Services</button>
+        <button type="button" [class.btn-selected]="!isShowListService" (click)="enableSection(false)">Edit Business Hours</button>
         <button>Edit Business Hours</button>
       </div>
     </div>
 
     <div class="section-profile services-content">
-      <!-- Services here -->
-      <h2>Servicios</h2>
-      @for (item of [0,0,0,0]; track $index) {
-      <app-card-services-business></app-card-services-business>
-      }
+
+      <div>
+        <!-- Services here -->
+        @if (isShowListService) {
+        <section>
+          <h2>Servicios</h2>
+          @for (item of [0,0,0,0]; track $index) {
+          <app-card-services-business></app-card-services-business>
+          }
+        </section>
+        }@else {
+        <!-- Schudeles-company here -->
+        <section>
+          <app-user-schudeles></app-user-schudeles>
+        </section>
+        }
+
+
+      </div>
     </div>
     }
 

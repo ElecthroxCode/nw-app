@@ -1,0 +1,35 @@
+
+.container-schudeles{
+
+}
+.schudeles-form{
+    width: 60%;
+    margin: auto;
+}
+.schudeles-form select{
+    width: 120px;
+    height: 2.2rem;
+}
+
+.section-day-week{
+    display: flex;
+}
+.btn-add{
+    height: auto;
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    
+}
+
+.btn-add button{
+    width: 100px;
+    height: 2.5rem;
+    background-color: var(--color-sage-light);
+    transition: .3s ease;
+}
+
+.btn-add button:hover{
+    background-color: var(--color-sage-dark);
+    color: var(--color-white);
+}

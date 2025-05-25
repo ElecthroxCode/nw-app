@@ -1,0 +1,47 @@
+<div class="container-schudeles">
+    <div class="schudeles-form">
+        <h3>Horario en que trabaja tu empresa</h3>
+        <form action="">
+            <div class="form-text">
+                <div class="section-day-week">
+                    <div>
+                        <label for="days">Elige los días en trabaja la empresa</label>
+                        <select id="days" [(ngModel)]="selectDay" name="days">
+                            @for (opt of options; track $index) {
+                            <option [value]="opt">{{ opt }}</option>
+                            }
+                        </select>
+                    </div>
+                    <div>
+                        <label for="hour-morning">Turno de la mañana</label>
+                        <select id="hour-morning" [(ngModel)]="selectHourMorning" name="hour-morning">
+                            @for (hour of hoursMorning; track $index) {
+                            <option [value]="hour">{{ hour }}</option>
+                            }
+                        </select>
+                    </div>
+                    <div>
+                        <label for="hour-aternoom">Turno de la tarde</label>
+                        <select id="hour-aternoom" [(ngModel)]="selectHourAternoom" name="hour-aternoom">
+                            @for (hour of hoursAternoom; track $index) {
+                            <option [value]="hour">{{ hour }}</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="btn-add">
+                        <button type="button">Agregar</button>
+                    </div>
+
+                    <div class="list-days">
+
+                    </div>
+
+                    <div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-text"><label for="">Email de la empresa</label><input type="text" id=""></div>
+        </form>
+    </div>
+</div>

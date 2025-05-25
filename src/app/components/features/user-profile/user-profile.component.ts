@@ -5,10 +5,17 @@ import { Subscription } from 'rxjs';
 import { CardServicesBusinessComponent } from '../card-services-business/card-services-business.component';
 import { CommonModule } from '@angular/common';
 import { ModadEditProfileComponent } from './modad-edit-profile/modal-edit-profile.component';
+import { UserSchudelesComponent } from '../user-schudeles/user-schudeles.component';
 
 @Component({
   selector: 'app-user-profile',
-  imports: [ModalRegisterComponent, CardServicesBusinessComponent, CommonModule, ModadEditProfileComponent],
+  imports: [
+    ModalRegisterComponent,
+    CardServicesBusinessComponent,
+    CommonModule,
+    ModadEditProfileComponent,
+    UserSchudelesComponent
+  ],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })
@@ -36,6 +43,7 @@ export class UserProfileComponent implements OnInit, OnDestroy{
   isShowModalEditInfo:boolean = false;
   isShowModalEditProfile?:boolean;
   isHidden:boolean = true;
+  isShowListService=true;
 
   private subscriptions: Subscription = new Subscription();
   
@@ -58,6 +66,10 @@ export class UserProfileComponent implements OnInit, OnDestroy{
   }
   hiddenTable(){
     this.isHidden = true;
+  }
+
+  enableSection(enable:boolean){
+    this.isShowListService = enable;
   }
 }
 
