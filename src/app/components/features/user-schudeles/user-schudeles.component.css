@@ -3,11 +3,28 @@
 
 }
 .schudeles-form{
-    width: 60%;
+   
     margin: auto;
 }
+
+.list-days{
+    background-color: var(--color-pink-light);
+    border-radius: 12px;
+    padding: 6px;
+    margin: 2.5rem 0rem;
+}
+
+.list-days p{
+    background-color: rgb(227, 255, 246);
+    height: 2rem;
+    border-radius: 8px;
+    padding: 4px 6px;
+    margin: 3px;
+    
+}
+
 .schudeles-form select{
-    width: 120px;
+    width: 200px;
     height: 2.2rem;
 }
 

@@ -12,36 +12,62 @@
                             }
                         </select>
                     </div>
-                    <div>
-                        <label for="hour-morning">Turno de la mañana</label>
-                        <select id="hour-morning" [(ngModel)]="selectHourMorning" name="hour-morning">
-                            @for (hour of hoursMorning; track $index) {
-                            <option [value]="hour">{{ hour }}</option>
-                            }
-                        </select>
+                    <div class="box-1">
+                        <div >
+                            <label for="hour-morning">Turno de la mañana</label>
+                            <select id="hour-morning" [(ngModel)]="fromSelectHourMorning" name="hour-morning">
+                                @for (hour of hoursMorning; track $index) {
+                                <option [value]="hour">{{ hour }}</option>
+                                }
+                            </select>
+                        </div>
+                        <span>Hasta</span>
+                        <div>
+                            <label for="hour-morning"></label>
+                            <select id="hour-morning" [(ngModel)]="toSelectHourMorning" name="hour-morning">
+                                @for (hour of hoursMorning; track $index) {
+                                <option [value]="hour">{{ hour }}</option>
+                                }
+                            </select>
+                        </div>
                     </div>
-                    <div>
-                        <label for="hour-aternoom">Turno de la tarde</label>
-                        <select id="hour-aternoom" [(ngModel)]="selectHourAternoom" name="hour-aternoom">
-                            @for (hour of hoursAternoom; track $index) {
-                            <option [value]="hour">{{ hour }}</option>
-                            }
-                        </select>
+                    
+                    <div class="box-2">
+                        <div>
+                            <label for="hour-morning">Turno de la tarde</label>
+                            <select id="hour-morning" [(ngModel)]="fromSelectHourAfternoon" name="hour-morning">
+                                @for (hour of hoursAfternoon; track $index) {
+                                <option [value]="hour">{{ hour }}</option>
+                                }
+                            </select>
+                        </div>
+                        <span>Hasta</span>
+                        <div>
+                            <label for="hour-morning"></label>
+                            <select id="hour-morning" [(ngModel)]="toSelectHourAfternoon" name="hour-morning">
+                                @for (hour of hoursAfternoon; track $index) {
+                                <option [value]="hour">{{ hour }}</option>
+                                }
+                            </select>
+                        </div>
                     </div>
                     <div class="btn-add">
                         <button type="button">Agregar</button>
                     </div>
 
-                    <div class="list-days">
-
-                    </div>
-
-                    <div>
-                    </div>
-
                 </div>
             </div>
-            <div class="form-text"><label for="">Email de la empresa</label><input type="text" id=""></div>
+            <div class="list-days">
+                <div>
+                    <p>lista de horario</p>
+                    <p>lista de horario</p>
+                    <p>lista de horario</p>
+                </div>
+            </div>
         </form>
+        
+        <div class="schudele">
+            <app-schudele-templete></app-schudele-templete>
+        </div>
     </div>
 </div>

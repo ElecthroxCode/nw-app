@@ -1,0 +1,22 @@
+<p>schudele-templete works!</p>
+<div>
+    <div class="day-grid">
+        @for (day of dayWeek; track $index) {
+        <p class="day-w">{{day}}</p>
+        }
+    </div>
+    <div class="day-grid">
+        @for (row of schudeleRows; track row.hour) {
+        <div class="hour-cell">{{ row.hour }}</div>
+
+          @for (cell of row.cells; track $index) {
+             <div 
+                 class="cell" [class.job-fill]="cell.selected"
+                (mousedown)="onMouseDown(cell)"
+                (mouseover)="onMouseOver(cell)"> 
+                {{ cell.selected ? 'work!' : ''}}
+            </div>
+          }
+        }
+    </div>
+</div>
