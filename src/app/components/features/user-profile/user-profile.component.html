@@ -97,7 +97,7 @@
       <div class="btns-panel-services">
         <button type="button" [class.btn-selected]="isShowListService" (click)="enableSection(true)">View my Services</button>
         <button type="button" [class.btn-selected]="!isShowListService" (click)="enableSection(false)">Edit Business Hours</button>
-        <button>Edit Business Hours</button>
+        <button type="button" [class.btn-selected]="!isShowListService" (click)="enableSectionCaledary(true)" >Edit Business Hours</button>
       </div>
     </div>
 
@@ -131,5 +131,11 @@
     @if (isShowModalEditProfile) {
     <app-modal-edit-profile></app-modal-edit-profile>
     }
+
+    @if (isShowCaledarParto) {
+      <app-calendario-parto [servicioSeleccionado]="'Control Prenatal'"></app-calendario-parto>
+
+    }
+
   </div>
 </section>

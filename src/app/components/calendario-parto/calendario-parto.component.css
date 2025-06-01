@@ -1,0 +1,53 @@
+
+.calendario-container {
+  max-width: 600px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.calendario {
+  border-collapse: collapse;
+  width: 100%;
+  user-select: none;
+}
+
+.calendario th, .calendario td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+  width: 14.28%; /* 100/7 */
+}
+
+.dia-mes {
+  color: black;
+}
+
+.calendario td:not(.dia-mes) {
+  color: #aaa;
+}
+
+.seleccionado {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.selector-hora {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.selector-hora select {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.resumen {
+  margin-top: 30px;
+  padding: 15px;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+}

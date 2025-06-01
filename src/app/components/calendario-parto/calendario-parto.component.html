@@ -1,0 +1,56 @@
+
+<div class="calendario-container">
+  <h2>Selecciona un día</h2>
+
+  <!-- Controles de mes -->
+  <div class="calendario-controles">
+    <button (click)="anteriorMes()" [disabled]="esPrimerMes">← Anterior</button>
+    <span class="mes-actual">{{ fechaMostrada | date: 'MMMM yyyy' }}</span>
+    <button (click)="siguienteMes()">Siguiente →</button>
+  </div>
+
+  <!-- Calendario -->
+  <table class="calendario">
+    <thead>
+      <tr>
+        <th>Dom</th>
+        <th>Lun</th>
+        <th>Mar</th>
+        <th>Mié</th>
+        <th>Jue</th>
+        <th>Vie</th>
+        <th>Sáb</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let semana of semanas">
+        <td *ngFor="let dia of semana"
+            (click)="dia >= fechaActualSinHora() && seleccionarDia(dia)"
+            [class.dia-mes]="dia.getMonth() === fechaMostrada.getMonth()"
+            [class.fuera-mes]="dia.getMonth() !== fechaMostrada.getMonth()"
+            [class.hoy]="esMismoDia(dia, fechaActual)"
+            [class.seleccionado]="esMismoDia(dia, fechaSeleccionada)"
+            [class.deshabilitado]="dia < fechaActualSinHora()">
+          {{ dia.getDate() }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Selector de hora -->
+  <div *ngIf="fechaSeleccionada" class="selector-hora">
+    <label for="horas">Selecciona hora:</label>
+    <select id="horas" [(ngModel)]="horaSeleccionada">
+      <option [value]="null">-- Selecciona --</option>
+      <option *ngFor="let hora of horasDisponibles" [value]="hora">{{ hora }}</option>
+    </select>
+  </div>
+
+  <!-- Resumen -->
+  <div *ngIf="fechaSeleccionada && horaSeleccionada" class="resumen">
+    <h3>Resumen del parto</h3>
+    <p><strong>Servicio:</strong> {{ servicioSeleccionado }}</p>
+    <p><strong>Fecha:</strong> {{ fechaSeleccionada | date:'fullDate' }}</p>
+    <p><strong>Hora:</strong> {{ horaSeleccionada }}</p>
+  </div>
+</div>
