@@ -96,8 +96,8 @@
     <div class="section-profile">
       <div class="btns-panel-services">
         <button type="button" [class.btn-selected]="isShowListService" (click)="enableSection(true)">View my Services</button>
-        <button type="button" [class.btn-selected]="!isShowListService" (click)="enableSection(false)">Edit Business Hours</button>
-        <button type="button" [class.btn-selected]="!isShowListService" (click)="enableSectionCaledary(true)" >Edit Business Hours</button>
+        <button type="button" [class.btn-selected]="!isShowServices && !isShowCaledarAppointment" (click)="enableSection(false)">Edit Business Hours</button>
+        <button type="button" [class.btn-selected]="isShowCaledarAppointment" (click)="enableSectionCaledary(true)" >Book Appointment</button>
       </div>
     </div>
 
@@ -112,11 +112,13 @@
           <app-card-services-business></app-card-services-business>
           }
         </section>
-        }@else {
+        }@else if(!isShowListService && !isShowCaledarAppointment){
         <!-- Schudeles-company here -->
         <section>
           <app-user-schudeles></app-user-schudeles>
         </section>
+        }@else {
+          <app-calendario-parto [servicioSeleccionado]="'Control Prenatal'"></app-calendario-parto>
         }
 
 
@@ -132,10 +134,6 @@
     <app-modal-edit-profile></app-modal-edit-profile>
     }
 
-    @if (isShowCaledarParto) {
-      <app-calendario-parto [servicioSeleccionado]="'Control Prenatal'"></app-calendario-parto>
-
-    }
 
   </div>
 </section>

@@ -46,7 +46,7 @@ export class UserProfileComponent implements OnInit, OnDestroy{
   isShowModalEditProfile?:boolean;
   isHidden:boolean = true;
   isShowListService=true;
-  isShowCaledarParto = true;
+  isShowCaledarAppointment = false;
 
   private subscriptions: Subscription = new Subscription();
   
@@ -73,12 +73,12 @@ export class UserProfileComponent implements OnInit, OnDestroy{
 
   enableSection(enable:boolean){
     this.isShowListService = enable;
-    this.isShowCaledarParto = false;
+    this.isShowCaledarAppointment = false;
+
   }
 
    enableSectionCaledary(enable:boolean){
-    this.isShowListService = enable;
-    this.isShowCaledarParto = true;
+    this.isShowCaledarAppointment = enable;
   }
 }
 

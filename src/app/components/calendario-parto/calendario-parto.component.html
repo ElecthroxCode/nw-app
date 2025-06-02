@@ -4,9 +4,9 @@
 
   <!-- Controles de mes -->
   <div class="calendario-controles">
-    <button (click)="anteriorMes()" [disabled]="esPrimerMes">← Anterior</button>
+    <button (click)="anteriorMes()" [disabled]="esPrimerMes"><i class="bi bi-chevron-left"></i> Anterior</button>
     <span class="mes-actual">{{ fechaMostrada | date: 'MMMM yyyy' }}</span>
-    <button (click)="siguienteMes()">Siguiente →</button>
+    <button (click)="siguienteMes()">Siguiente <i class="bi bi-chevron-right"></i></button>
   </div>
 
   <!-- Calendario -->
