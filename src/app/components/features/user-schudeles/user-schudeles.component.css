@@ -1,26 +1,8 @@
 
-.container-schudeles{
 
-}
 .schudeles-form{
    
     margin: auto;
-}
-
-.list-days{
-    background-color: var(--color-pink-light);
-    border-radius: 12px;
-    padding: 6px;
-    margin: 2.5rem 0rem;
-}
-
-.list-days p{
-    background-color: rgb(227, 255, 246);
-    height: 2rem;
-    border-radius: 8px;
-    padding: 4px 6px;
-    margin: 3px;
-    
 }
 
 .schudeles-form select{
@@ -36,17 +18,18 @@
     display: grid;
     justify-content: center;
     align-items: end;
-    
+    margin-top: 20px;
 }
 
 .btn-add button{
-    width: 100px;
+    width: 200px;
     height: 2.5rem;
-    background-color: var(--color-sage-light);
+    font-weight: bold;
+    background-color: var(--color-pink);
     transition: .3s ease;
 }
 
 .btn-add button:hover{
-    background-color: var(--color-sage-dark);
-    color: var(--color-white);
+    background-color: var(--color-pink-dark);
+    
 }

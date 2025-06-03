@@ -6,7 +6,7 @@ import { CardServicesBusinessComponent } from '../card-services-business/card-se
 import { CommonModule } from '@angular/common';
 import { ModadEditProfileComponent } from './modad-edit-profile/modal-edit-profile.component';
 import { UserSchudelesComponent } from '../user-schudeles/user-schudeles.component';
-import { CalendarioPartoComponent } from '../../calendario-parto/calendario-parto.component';
+import { CalendarioPartoComponent } from '../../appointment-calendar/appointment-calendar.component';
 
 @Component({
   selector: 'app-user-profile',
@@ -46,6 +46,7 @@ export class UserProfileComponent implements OnInit, OnDestroy{
   isShowModalEditProfile?:boolean;
   isHidden:boolean = true;
   isShowListService=true;
+  isShowSchedule = false;
   isShowCaledarAppointment = false;
 
   private subscriptions: Subscription = new Subscription();
@@ -71,15 +72,14 @@ export class UserProfileComponent implements OnInit, OnDestroy{
     this.isHidden = true;
   }
 
-  enableSection(enable:boolean){
-    this.isShowListService = enable;
-    this.isShowCaledarAppointment = false;
+  enableSection(enableSetion1:boolean, enableSetion2:boolean, enableSetion3:boolean){
+    this.isShowListService = enableSetion1;
+    this.isShowSchedule = enableSetion2;
+    this.isShowCaledarAppointment = enableSetion3;
 
   }
 
-   enableSectionCaledary(enable:boolean){
-    this.isShowCaledarAppointment = enable;
-  }
+  
 }
 
 

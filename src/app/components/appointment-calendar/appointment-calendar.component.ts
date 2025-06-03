@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-calendario-parto',
   imports: [FormsModule, CommonModule],
-  templateUrl: './calendario-parto.component.html',
-  styleUrl: './calendario-parto.component.css'
+  templateUrl: './appointment-calendar.component.html',
+  styleUrl: './appointment-calendar.component.css'
 })
 export class CalendarioPartoComponent implements OnInit{
   @Input() servicioSeleccionado!: string;

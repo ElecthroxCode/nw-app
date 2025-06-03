@@ -95,9 +95,9 @@
     @if (isShowServices) {
     <div class="section-profile">
       <div class="btns-panel-services">
-        <button type="button" [class.btn-selected]="isShowListService" (click)="enableSection(true)">View my Services</button>
-        <button type="button" [class.btn-selected]="!isShowServices && !isShowCaledarAppointment" (click)="enableSection(false)">Edit Business Hours</button>
-        <button type="button" [class.btn-selected]="isShowCaledarAppointment" (click)="enableSectionCaledary(true)" >Book Appointment</button>
+        <button type="button" [class.btn-selected]="isShowListService" (click)="enableSection(true, false, false)">View my Services</button>
+        <button type="button" [class.btn-selected]="isShowSchedule" (click)="enableSection(false, true, false)">Edit Business Hours</button>
+        <button type="button" [class.btn-selected]="isShowCaledarAppointment" (click)="enableSection(false, false, true)" >Book Appointment</button>
       </div>
     </div>
 
